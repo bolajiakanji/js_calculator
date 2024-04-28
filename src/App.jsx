@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [] = useState(0);
+useEffect(() => {
+  let buttonNumbers = document.querySelectorAll(".button_number")
+  let buttonNumber
+  for ( buttonNumber of buttonNumbers) {
+buttonNumber.onClick = ""
+  }
+  
+})
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function element (e) {
+console.log(e.innerHTML)
 }
 
-export default App
+  return (
+    <div>
+      <div id="display"></div>
+      <div id="clear">AC</div>
+      <div className="button_number" id="divide">/</div>
+      <div className="button_number" id="multiply">x</div>
+      
+      <div className="button_number" id="seven">7</div>
+      <div className="button_number" id="eight">8</div>
+      <div className="button_number" id="nine">9</div>
+      <div id="subtract">-</div>
+
+      <div className="button_number" id="four">4</div>
+      <div className="button_number" id="five">5</div>
+      <div className="button_number" id="six">6</div>
+      <div id="add">+</div>
+
+      <div className="button_number" id="one">1</div>
+      <div className="button_number" id="two">2</div>
+      <div className="button_number" id="three">3</div>
+      <div id="equals">=</div>
+      <div className="button_number" id="zero">0</div>
+      <div className="button_number" id="decimal">.</div>
+
+
+      
+
+
+    </div>
+  );
+}
+
+export default App;
