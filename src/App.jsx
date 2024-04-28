@@ -9,8 +9,8 @@ function App() {
     
          
          
-    for (buttonNumber of buttonNumbers) {
-      buttonNumber.addEventListener("click", function (e) {
+    for (buttonNumber=0; buttonNumber < buttonNumbers.length; buttonNumber++) {
+      buttonNumbers[buttonNumber].addEventListener("click", function (e) {
         
 
 setDisplaystate(displaystate + e.target.innerText)
