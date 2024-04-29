@@ -2,24 +2,37 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [displaystate, setDisplaystate] = useState("");
-  useEffect(() => {
+  const [displaystate, setDisplaystate] = useState("gd");
+ useEffect(() => {
     let buttonNumbers = document.querySelectorAll(".button_number");
-    let buttonNumber;
-    
-         
-         
-    for (buttonNumber=0; buttonNumber < buttonNumbers.length; buttonNumber++) {
-      buttonNumbers[buttonNumber].addEventListener("click", function (e) {
-        
+    let button 
+    for (button=0;button<buttonNumbers.length; button++){
+      buttonNumbers[button].addEventListener("click",you)
 
-setDisplaystate(displaystate + e.target.innerText)
-      }
-      )
     }
-  });
 
-  
+    
+     
+    return () => {
+      for (button=0;button<buttonNumbers.length; button++){
+        
+      buttonNumbers[button].removeEventListener("click",you)}}
+
+         
+         
+    
+    //   buttonNumbers.addEventListener("click", you)
+    
+    // return () => buttonNumbers.removeEventListener("click", you)
+
+    
+    });
+
+    function you(e) {
+        
+      console.log('loop')
+      setDisplaystate(displaystate + e.target.innerText )
+    }  
 
   
 
